@@ -1,6 +1,6 @@
 # Node.js Express
 
-## 開發掛載靜態網站 測試用 Server
+## 掛載靜態網站 測試用 Server
 
 ### Packages
 
