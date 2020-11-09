@@ -1,9 +1,9 @@
-// ----------------------------------------------------------------------------------------------
-// 載入Express 套件
 const express = require("express");
+const cors = require("cors");
+const sqlite3 = require("sqlite3").verbose();
 
-// 載入 CORS
-let cors = require("cors");
+// ----------------------------------------------------------------------------------------------
+/* CORS 設定 */
 const corsOptions = {
   origin: [
     "http://www.example.com",
@@ -21,7 +21,7 @@ let app = express();
 app.use(cors());
 
 // 資料庫
-let db = require("./database.js");
+let db = new sqlite3.Database("./db.sqlite");
 
 /* ----------------------------------------------------------------------------------------------
    設定靜態頁面 */
@@ -117,4 +117,4 @@ let server = app.listen(port, function () {
 });
 
 /* https://stackoverflow.com/questions/39677759/express-js-socket-io-socket-io-js-404 */
-var io = require("socket.io")(server);
+let io = require("socket.io")(server);
