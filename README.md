@@ -1,6 +1,6 @@
-# Node.js Express
+# Host SSG Website & API TEST
 
-## 掛載靜態網站 測試用 Server
+## 使用 Node.js Express (測試用)
 
 ### Packages
 
